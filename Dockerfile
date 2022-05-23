@@ -16,7 +16,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
     # install coreutils
     coreutils jq pv gcc g++ \
     neofetch python3-dev git bash build-essential nodejs npm ruby \
-    python-minimal locales python-lxml qbittorrent-nox nginx gettext-base xz-utils \
+    python-minimal locales python-lxml nginx gettext-base xz-utils \
     # install extraction tools
     p7zip-full p7zip-rar rar unrar zip unzip \
     # miscellaneous helpers

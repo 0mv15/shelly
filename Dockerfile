@@ -8,7 +8,8 @@ RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv
 
 
 # install required packages
-RUN rm -rf /var/lib/apt/lists/* && \
+RUN apt-get update && apt-get install -y software-properties-common && \
+    rm -rf /var/lib/apt/lists/* && \
     apt-add-repository non-free && \
     apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     # this package is required to fetch "contents" via "TLS"

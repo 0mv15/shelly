@@ -11,12 +11,12 @@ fi
 
 if [[ -n $CREDENTIALS_LINK ]]; then
 	echo "credentials.json detected"
-    aria2c $CREDENTIALS_LINK && drivedl set /usr/src/app/credentials.json
+    wget $CREDENTIALS_LINK && drivedl set /usr/src/app/credentials.json
 fi
 
 if [[ -n $ACCOUNTS_FOLDER_LINK ]]; then
 	echo "accounts.zip detected"
-    aria2c $ACCOUNTS_FOLDER_LINK && unzip accounts.zip -d accounts && rm *.zip
+    wget $ACCOUNTS_FOLDER_LINK && unzip accounts.zip -d accounts && rm *.zip
 fi
 
 echo "SETUP COMPLETED"
